@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Visa = ({visa}) => {
     const { _id, visaType, photo, fee,  name, document, age, ProccingTime,  } = visa
@@ -15,6 +16,10 @@ const Visa = ({visa}) => {
                 <p className="text-gray-600">Age: {age}</p>
                 <p className="text-gray-600">Processing Time: {ProccingTime}</p>
                 <p className="text-gray-600">Documents: {document}</p>
+
+                <Link to={`/VisaDetails/${_id}`}>
+                <button className='border px-4 py-1 rounded-lg hover:bg-blue-500 mt-3'>View Details </button>
+                </Link>
             </div>
         </div>
         </div>

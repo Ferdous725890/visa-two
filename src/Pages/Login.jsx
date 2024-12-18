@@ -1,4 +1,3 @@
-import { Result } from "postcss";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
@@ -35,24 +34,17 @@ const Login = () => {
           willClose: () => {
             clearInterval(timerInterval);
           },
-
-         
         }).then((result) => {
           /* Read more about handling dismissals below */
           if (result.dismiss === Swal.DismissReason.timer) {
             console.log("I was closed by the timer");
-            navigate('/'); 
+            navigate("/");
           }
         });
       })
       .then((error) => {
         console.log(error);
       });
-
-    
-
-
-
   };
 
   return (
@@ -115,7 +107,9 @@ const Login = () => {
                       alt=""
                     />
                   </span>
-                  <button className="flex items-center">Login With Google</button>
+                  <button className="flex items-center">
+                    Login With Google
+                  </button>
                 </div>
               </div>
             </form>
